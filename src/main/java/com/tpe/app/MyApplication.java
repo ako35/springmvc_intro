@@ -17,12 +17,12 @@ public class MyApplication {
 
 //        MessageService service = context.getBean(MessageService.class);
 
-        MessageService service= context.getBean("mailService",MessageService.class);
-        MessageService service2= context.getBean("mailService",MessageService.class);
-
-        if (service2==service){
-            System.out.println("ayni");
-        } else System.out.println("farkli");
+        MessageService service= context.getBean("smsService",MessageService.class);
+//        MessageService service2= context.getBean("mailService",MessageService.class);
+//
+//        if (service2==service){
+//            System.out.println("ayni");
+//        } else System.out.println("farkli");
 
         service.sendMessage(message);
 
